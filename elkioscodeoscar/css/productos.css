@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-image: url(/img/storeLocator.webp);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    position: sticky; /* Para que el header quede fijo */
+    top: 0;
+    z-index: 100;
+
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+/* Estilos del menú hamburguesa */
+.hamburgersa {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Estilos para el hero y el contenido principal */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #eee;
+}
+
+.content {
+    padding: 2rem;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del header */
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .hamburgersa {
+        display: block;
+    }
+}
+
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    border: 2px solid #fbf7f7;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+#carrito {
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: fixed; /* Para que el carrito se mantenga en su lugar al hacer scroll */
+    top: 10px;        /* Ajusta la posición vertical según sea necesario */
+    right: 10px;      /* Ajusta la posición horizontal según sea necesario */
+    background-color: white;
+}
+
+#ticket {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #090000;
+    padding: 20px;
+}
